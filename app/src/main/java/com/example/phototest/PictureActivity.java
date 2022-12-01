@@ -84,9 +84,6 @@ public class PictureActivity extends AppCompatActivity {
 //                    url = "androidamap://route?sourceApplication=amap&slat="+currLocationX+"&slon="+currLocationY
 //                            +"&dlat="+currLocationY+"&dlon="+currLocationX+"&dname="+"扬州市政府"+"&dev=0&t=1";
 //                }
-//
-//
-//
 //                Uri uri = Uri.parse(url);
 //                //将功能Scheme以URI的方式传入data
 //                intent.setData(uri);

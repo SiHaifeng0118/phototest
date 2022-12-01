@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("相册"));
         tabLayout.addTab(tabLayout.newTab().setText("USB"));
+
+
         fragmentList.add(new PictureFragment());
         fragmentList.add(new UsbFragment());
-
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
