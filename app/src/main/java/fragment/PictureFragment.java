@@ -57,7 +57,7 @@ public class PictureFragment extends Fragment {
         Cursor cursor1 = MyApplication.getContext().getContentResolver().query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
                 null,null,null,null);
         int VideoPath = cursor1.getColumnIndexOrThrow(MediaStore.Video.Media.DATA);
-        Log.d(TAG, "myCursor: aaaa||付广告费||"+cursor.getCount());
+        Log.d(TAG, "myCursor: aaaa||付广方法告费||"+cursor.getCount());
         while (cursor.moveToNext()) {
             File file = new File(cursor.getString(indexPhotoPath));
             Long a = file.lastModified();
