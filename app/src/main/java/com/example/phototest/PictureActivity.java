@@ -60,8 +60,44 @@ public class PictureActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(PictureActivity.this,BaiduMapActivity.class);
-                startActivity(intent1);
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_DEFAULT);
+//
+////将功能Scheme以URI的方式传入data
+//                Uri uri = Uri.parse("androidamap://navi?sourceApplication=appname&amp;poiname=fangheng&amp;lat=36.547901&amp;lon=104.258354&amp;dev=1&amp;style=2");
+//                intent.setData(uri);
+//
+////启动该页面即可
+//                startActivity(intent);
+//                double currLocationY = 32.43571 ;
+//                double currLocationX=119.569684;
+//                String url;
+//
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_DEFAULT);
+//                Log.i("高德定位：","经度："+currLocationY+" ,纬度："+currLocationX);
+//                if (currLocationX == 0.0 || currLocationY == 0.0){
+//                    url = "androidamap://route?sourceApplication=amap&dlat="+currLocationY+"&dlon="+currLocationX+"&dname="+"扬州市政府"+"&dev=0&t=1";
+//                }else {
+//                    url = "androidamap://route?sourceApplication=amap&slat="+currLocationX+"&slon="+currLocationY
+//                            +"&dlat="+currLocationY+"&dlon="+currLocationX+"&dname="+"扬州市政府"+"&dev=0&t=1";
+//                }
+//
+//
+//
+//                Uri uri = Uri.parse(url);
+//                //将功能Scheme以URI的方式传入data
+//                intent.setData(uri);
+//                //启动该页面即可
+//                startActivity(intent);
+                String act = "android.intent.action.VIEW";
+                String dat = "androidamap://keywordNavi?sourceApplication=softname&keyword=" + "扬州市政府" + " &style=2";
+                String pkg = "com.autonavi.minimap";
+                Intent intent = new Intent(act, Uri.parse(dat));
+                intent.setPackage(pkg);
+                startActivity(intent);
             }
         });
 
