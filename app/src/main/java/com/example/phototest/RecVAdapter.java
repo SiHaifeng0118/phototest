@@ -175,6 +175,7 @@ public class RecVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     Intent intent;
                     if(expath.equals("mp4"))
                     {
+                        Log.d(TAG, "onClick: sadsad"+list.get(position).getPath());
                         intent = new Intent(MyApplication.getContext(),MovieActivity.class);
                     }else {
                         intent = new Intent(MyApplication.getContext(),PictureActivity.class);
